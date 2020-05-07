@@ -224,8 +224,9 @@ export default class EmojiButton {
     });
 
     this.wrapper = createElement('div', 'wrapper');
+    // @ts-ignore
+    this.wrapper.style.zIndex = this.options.zIndex;
     this.wrapper.appendChild(this.pickerEl);
-
     if (this.options.rootElement) {
       this.options.rootElement.appendChild(this.wrapper);
     }
