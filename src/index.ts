@@ -245,7 +245,11 @@ export default class EmojiButton {
 
   private destroyPicker(): void {
     if (this.options.rootElement) {
-      this.options.rootElement.removeChild(this.wrapper);
+      if (this.options.rootElement.contains(this.wrapper)) {
+        this.options.rootElement.removeChild(this.wrapper);
+      } else {
+        this.wrapper && this.wrapper.remove();
+      }
       this.popper.destroy();
       this.hideInProgress = false;
     }
