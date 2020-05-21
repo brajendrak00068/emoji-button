@@ -68,9 +68,6 @@
   --emoji-preview-size: 2em;
   --emoji-per-row: 8;
   --row-count: 6;
-
-  --content-height: calc((var(--emoji-size) * var(--emoji-size-multiplier)) * var(--row-count) + var(--category-name-size) + var(--category-button-height) + 0.5em);
-
   --category-name-size: 0.85em;
 
   --category-button-height: 2em;
@@ -138,7 +135,7 @@
 
 .emoji-picker__preview {
   height: var(--emoji-preview-size);
-  padding: 0.5em;
+  padding: 20px;
   border-top: 1px solid var(--border-color);
   display: flex;
   flex-direction: row;
